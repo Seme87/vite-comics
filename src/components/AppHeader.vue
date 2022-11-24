@@ -37,23 +37,28 @@ header{
   .main-nav{
     display: flex;
     align-items: center;
-    ul{
-      height: 100%;
-      display: flex;
-      list-style: none;
-      align-items: center;
-      
-      a{
-        font-size: 13px;
-        height: 100%;
-        font-weight: bold;
-        display: inline-block;
-        padding: 0 15px;
-        text-decoration: none;
-        color: #000;
-      }
-    }
+    
   }
+}
+ul{
+  display: flex;
+  height: 100%;
+  li{
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    list-style: none;
+  }
+}
+
+li a{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+  color: #000;
+  font-size: 13px;
+  font-weight: bold;
 }
 
 .active{
