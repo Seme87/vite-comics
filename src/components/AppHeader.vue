@@ -66,6 +66,9 @@ li a{
 }
 
 .logo{
-  padding: 20px 0;
+  padding: 10px 0;
+  img{
+    width: 70px;
+  }
 }
 </style>

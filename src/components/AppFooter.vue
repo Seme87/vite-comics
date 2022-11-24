@@ -7,7 +7,8 @@ export default {
 <template>
  <footer>
 
-  <div class="container">
+  <div class="footer-top container">
+    
 
     <div class="row">
 
@@ -75,7 +76,7 @@ export default {
       
       <div class="item-row-right">
         <div class="logo-footer">
-          
+          <img src="../assets/dc-logo-bg.png" alt="">
         </div>
       </div>
 
@@ -97,6 +98,7 @@ footer{
 .row{
   display: flex;
   justify-content: space-between;
+  height: 370px;
  
 }
 
@@ -111,16 +113,18 @@ footer{
 .item-row-right{
  
   width: 100%;
-  position: relative;
+  justify-content: flex-end;
+  align-items: end;
   display: flex;
 
 }
 
 .logo-footer {
-  
-  background-image: url("../assets/dc-logo-bg.png");
   background-size: cover;
   object-fit: cover;
+  img{
+    width:400px;
+  }
   
 }
 
