@@ -118,8 +118,8 @@ export default {
   }
 
   .card-img{
-    height:60px;
-    widows: 45px;
+    height:50px;
+    widows: 40px;
   }
  
   .card-img img{
