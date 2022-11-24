@@ -15,7 +15,7 @@ export default {
         <nav class="main-nav">
           <ul>
             <li><a href="#">CHARACTERS</a></li>
-            <li><a href="#">COMICS</a></li>
+            <li ><a class="active" href="#">COMICS</a></li>
             <li><a href="#">MOVIES</a></li>
             <li><a href="#">TV</a></li>
             <li><a href="#">GAMES</a></li>
@@ -30,7 +30,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
 header{
   padding: 20px 10px;
   display: flex;
@@ -39,9 +38,11 @@ header{
     display: flex;
     align-items: center;
     ul{
+      height: 100%;
       display: flex;
       list-style: none;
       align-items: center;
+      
       a{
         font-size: 13px;
         height: 100%;
@@ -55,25 +56,8 @@ header{
   }
 }
 
-// header {
-//     text-align: center;
-//     .main-nav {
-//         ul {
-//             display: flex;
-//             list-style: none;
-//             justify-content: center;
-
-//             a {
-//                 display: inline-block;
-//                 padding: 15px 25px;
-//                 text-decoration: none;
-//                 color: #000;
-
-//                 &.active {
-//                     background-color: var(--secondary-color);
-//                 }
-//             }
-//         }
-//     }
-// }
+.active{
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+}
 </style>
