@@ -31,7 +31,6 @@ export default {
 
 <style lang="scss" scoped>
 header{
-  padding: 20px 10px;
   display: flex;
   justify-content: space-between;
   .main-nav{
@@ -64,5 +63,9 @@ li a{
 .active{
   color: var(--primary-color);
   border-bottom: 2px solid var(--primary-color);
+}
+
+.logo{
+  padding: 20px 0;
 }
 </style>
