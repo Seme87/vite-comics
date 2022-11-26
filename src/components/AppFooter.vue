@@ -75,15 +75,35 @@ export default {
       </div>
       
       <div class="item-row-right">
+
         <div class="logo-footer">
           <img src="../assets/dc-logo-bg.png" alt="">
         </div>
+
       </div>
 
     </div>
     
     
 
+  </div>
+
+  <div class="footer-bottom">
+    <div class="section container">
+      <div class="section-left">
+        <button class="btn">SH0P NOW</button>
+      </div>
+      <div class="section-right">
+        <ul>
+          <li><a href="#"><h3>FOLLOW US</h3></a></li>
+          <li><a href="#"><img src="../assets/footer-facebook.png" alt="#"></a></li>
+          <li><a href="#"><img src="../assets/footer-twitter.png" alt="#"></a></li>
+          <li><a href="#"><img src="../assets/footer-youtube.png" alt="#"></a></li>
+          <li><a href="#"><img src="../assets/footer-pinterest.png" alt="#"></a></li>
+          <li><a href="#"><img src="../assets/footer-periscope.png" alt="#"></a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 
  </footer>
@@ -93,6 +113,8 @@ export default {
 footer{
   
   background-image: url("../assets/footer-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .row{
@@ -114,24 +136,20 @@ footer{
  
   width: 100%;
   justify-content: flex-end;
-  align-items: end;
+  align-items: center;
   display: flex;
+  overflow: hidden;
 
-}
-
-.logo-footer {
-  background-size: cover;
-  object-fit: cover;
-  img{
-    width:400px;
-  }
-  
 }
 
 ul li a{
   font-size: 12px;
   text-decoration: none;
   color:gray;
+}
+
+ul li {
+  list-style: none;
 }
 
 h4{
@@ -146,5 +164,39 @@ h4{
 
 .link{
   padding-top: 10px;
+}
+
+.footer-bottom{
+  background-color: #303030;
+  padding: 20px 0;
+  
+}
+
+.section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-left, .section-right{
+  display: flex;
+  align-items: center;
+}
+.section-right{
+  ul{
+    display: flex;
+    align-items: center;
+  }
+  li{
+    list-style: none;
+    padding: 0 10px;
+  }
+}
+
+.btn{
+  color: white;
+  background-color: inherit;
+  border: 2px solid var(--primary-color);
+  padding: 10px 40px;
 }
 </style>
