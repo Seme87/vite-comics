@@ -1,12 +1,21 @@
 <script>
+import Sectionproduct from "./Sectionproducts.vue";
+import Sectionproducts from "./Sectionproducts.vue";
 export default {
   name: "AppMain",
+  components: { Sectionproduct },
 };
+components: {
+  Sectionproducts;
+}
 </script>
 
 <template>
   <main>
     <section class="content"></section>
+    <div class="container">
+      <Sectionproduct />
+    </div>
 
     <section class="section-card">
       <div class="container">
@@ -80,6 +89,7 @@ export default {
 
 <style lang="scss" scoped>
 main {
+  background-color: black;
   .content {
     height: 400px;
     background-image: url("../assets/jumbotron.jpg");
