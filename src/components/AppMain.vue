@@ -100,7 +100,7 @@ main {
 
 .section-card {
   background-color: var(--primary-color);
-  padding: 50px 0px;
+  padding: 30px 0px;
 }
 
 .row {
