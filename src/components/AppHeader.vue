@@ -57,6 +57,18 @@ export default {
       ],
     };
   },
+  methods: {
+    changeLink(index) {
+      console.log(index);
+      this.links.forEach((elm, i) => {
+        if (i === index) {
+          elm.active = true;
+        } else {
+          elm.active = false;
+        }
+      });
+    },
+  },
 };
 </script>
 
@@ -67,10 +79,14 @@ export default {
     </div>
     <nav class="main-nav">
       <ul>
-        <li v-for="item in links">
-          <a :href="item.href" :class="{ active: item.active }">{{
-            item.label
-          }}</a>
+        <li v-for="(item, index) in links">
+          <a
+            :href="item.href"
+            :class="{ active: item.active }"
+            @click.prevent="changeLink(index)"
+          >
+            {{ item.label }}
+          </a>
         </li>
       </ul>
     </nav>
