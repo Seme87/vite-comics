@@ -1,48 +1,95 @@
 <script>
-
-
 export default {
-  name: 'AppHeader',
-  
-}
+  name: "AppHeader",
+  data() {
+    return {
+      links: [
+        {
+          href: "#",
+          label: "CHARACTERS",
+          active: false,
+        },
+        {
+          href: "#",
+          label: "COMICS",
+          active: true,
+        },
+        {
+          href: "#",
+          label: "MOVIES",
+          active: false,
+        },
+        {
+          href: "#",
+          label: "TV",
+          active: false,
+        },
+        {
+          href: "#",
+          label: "GAMES",
+          active: false,
+        },
+        {
+          href: "#",
+          label: "COLLECTIBLUES",
+          active: false,
+        },
+        {
+          href: "#",
+          label: "VIDEOS",
+          active: false,
+        },
+        {
+          href: "#",
+          label: "FANS",
+          active: false,
+        },
+        {
+          href: "#",
+          label: "NEWS",
+          active: false,
+        },
+        {
+          href: "#",
+          label: "SHOP",
+          active: false,
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <template>
-    <header class="container">
-        <div class="logo">
-            <img src="../assets/dc-logo.png" alt="Logo-header">
-        </div>
-        <nav class="main-nav">
-          <ul>
-            <li><a href="#">CHARACTERS</a></li>
-            <li ><a class="active" href="#">COMICS</a></li>
-            <li><a href="#">MOVIES</a></li>
-            <li><a href="#">TV</a></li>
-            <li><a href="#">GAMES</a></li>
-            <li><a href="#">COLLECTIBLUES</a></li>
-            <li><a href="#">VIDEOS</a></li>
-            <li><a href="#">FANS</a></li>
-            <li><a href="#">NEWS</a></li>
-            <li><a href="#">SHOP</a></li>
-          </ul>
-        </nav>
-    </header>
+  <header class="container">
+    <div class="logo">
+      <img src="../assets/dc-logo.png" alt="Logo-header" />
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li v-for="item in links">
+          <a :href="item.href" :class="{ active: item.active }">{{
+            item.label
+          }}</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 </template>
 
 <style lang="scss" scoped>
-header{
+header {
   display: flex;
   justify-content: space-between;
-  .main-nav{
+  .main-nav {
     display: flex;
     align-items: center;
-    
   }
 }
-ul{
+ul {
   display: flex;
   height: 100%;
-  li{
+  li {
     display: flex;
     align-items: center;
     padding: 0 10px;
@@ -50,7 +97,7 @@ ul{
   }
 }
 
-li a{
+li a {
   display: flex;
   align-items: center;
   height: 100%;
@@ -60,14 +107,14 @@ li a{
   font-weight: bold;
 }
 
-.active{
+.active {
   color: var(--primary-color);
   border-bottom: 2px solid var(--primary-color);
 }
 
-.logo{
+.logo {
   padding: 10px 0;
-  img{
+  img {
     width: 70px;
   }
 }
