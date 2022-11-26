@@ -1,6 +1,10 @@
 <script>
+import AppCard from "./AppCard.vue";
 export default {
   name: "SectionProducts",
+  components: {
+    AppCard,
+  },
   data() {
     return {
       products: [
@@ -97,10 +101,16 @@ export default {
 <template>
   <section class="container">
     <div class="products">
-      <div class="product" v-for="product in products">
+      <!-- <div class="product" v-for="product in products">
         <img :src="product.thumb" :alt="product.title" />
         <h3>{{ product.series }}</h3>
-      </div>
+      </div> -->
+      <AppCard
+        class="product"
+        v-for="product in products"
+        :img="product.thumb"
+        :title="product.series"
+      />
     </div>
     <button>Load Now</button>
   </section>
@@ -118,15 +128,6 @@ section {
 .product {
   width: calc(100% / 6);
   padding: 10px 10px;
-
-  img {
-    max-width: 100%;
-  }
-
-  h3 {
-    margin-top: 10px;
-    color: white;
-  }
 }
 
 button {
